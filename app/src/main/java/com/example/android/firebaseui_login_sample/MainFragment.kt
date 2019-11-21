@@ -53,6 +53,10 @@ class MainFragment : Fragment() {
         //  user to customizeFragment. Don’t worry if you see unresolved errors as you
         //  implementation action! If you see unresolved errors, you can recompile the app from the
         //  Build menu to generate and use the new navigation actions you just created in the xml.
+        binding.settingsBtn.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToSettingsFragment()
+            findNavController().navigate(action)
+        }
     }
 
     /**
